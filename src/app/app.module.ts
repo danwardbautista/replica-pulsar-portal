@@ -27,10 +27,13 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatSelect, MatSelectModule } from '@angular/material/select';
 import { MatOptionModule } from '@angular/material/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
+
 import { HomeComponent } from './home/home.component';
 import { ServicesComponent } from './services/services.component';
 import { TagsComponent } from './tags/tags.component';
 import { TemplatesComponent } from './templates/templates.component';
+
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -73,6 +76,7 @@ const routes: Routes = [
     BrowserAnimationsModule,
     RouterModule.forRoot(routes),
     NgbModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

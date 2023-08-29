@@ -21,30 +21,31 @@
     <br>
     <div class="container">
       <input type="text" class="input-field" placeholder="Account">
-      <button class="enter-button"><i class="bi bi-arrow-right-circle"></i></button>
+      <button class="enter-button"><fa-icon [icon]="faArrowAltCircleRight"></fa-icon></button>
     </div>
     <hr>
     <div class="sidenav-button-container">
       <button routerLink="home" class="sidenav-button" routerLinkActive="active">
-        <mat-icon class="sidenav-button-icon">dashboard</mat-icon>
+        <fa-icon class="sidenav-button-icon" [icon]="faHome"></fa-icon>
         Dashboard
+        
       </button>
     </div>
     <div class="sidenav-button-container">
       <button routerLink="services" class="sidenav-button" routerLinkActive="active">
-        <mat-icon class="sidenav-button-icon">satellite</mat-icon>
+        <fa-icon class="sidenav-button-icon" [icon]="faSatelliteDish"></fa-icon>
         Services &amp; Devices
       </button>
     </div>
     <div class="sidenav-button-container">
       <button routerLink="templates" class="sidenav-button" routerLinkActive="active">
-        <mat-icon class="sidenav-button-icon">file_copy</mat-icon>
+        <fa-icon class="sidenav-button-icon" [icon]="faFileExport"></fa-icon>
         Templates
       </button>
     </div>
     <div class="sidenav-button-container">
       <button routerLink="tags" class="sidenav-button" routerLinkActive="active">
-        <mat-icon class="sidenav-button-icon">collections_bookmark</mat-icon>
+        <fa-icon class="sidenav-button-icon" [icon]="faTags"></fa-icon>
         Tags
       </button>
     </div>
@@ -54,28 +55,28 @@
 
     <div class="sidenav-button-container">
       <button routerLink="alerting" class="sidenav-button" routerLinkActive="active">
-        <mat-icon class="sidenav-button-icon">add_alert</mat-icon>
+        <fa-icon class="sidenav-button-icon" [icon]="faBell"></fa-icon>
         Alerting
       </button>
     </div>
 
     <div class="sidenav-button-container">
       <button routerLink="barring" class="sidenav-button" routerLinkActive="active">
-        <mat-icon class="sidenav-button-icon">lock</mat-icon>
+        <fa-icon class="sidenav-button-icon" [icon]="faLock"></fa-icon>
         Barring
       </button>
     </div>
 
     <div class="sidenav-button-container">
       <button routerLink="firewall" class="sidenav-button" routerLinkActive="active">
-        <mat-icon class="sidenav-button-icon">security</mat-icon>
+        <fa-icon class="sidenav-button-icon" [icon]="faChessRook"></fa-icon>
         Firewall
       </button>
     </div>
 
     <div class="sidenav-button-container">
       <button routerLink="domain" class="sidenav-button" routerLinkActive="active">
-        <mat-icon class="sidenav-button-icon">domain</mat-icon>
+        <fa-icon class="sidenav-button-icon" [icon]="faGlobe"></fa-icon>
         Domain Filter
       </button>
     </div>
@@ -85,15 +86,15 @@
 
     <div class="sidenav-button-container">
       <button routerLink="action-log" class="sidenav-button" routerLinkActive="active">
-        <mat-icon class="sidenav-button-icon">list</mat-icon>
+        <fa-icon class="sidenav-button-icon" [icon]="faFile"></fa-icon>
         Action Log
       </button>
     </div>
 
     <div class="sidenav-button-container">
       <button routerLink="users" class="sidenav-button" routerLinkActive="active">
-        <mat-icon class="sidenav-button-icon">supervisor_account</mat-icon>
-        Users
+        <fa-icon class="sidenav-button-icon" [icon]="faUsers"></fa-icon>
+        Users<fa-icon style="margin-left:5px;" [icon]="faExternalLink"></fa-icon>
       </button>
     </div>
 
