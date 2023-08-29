@@ -1,0 +1,21 @@
+.circle-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .blue-circle {
+    width: 110px; /* Adjust the circle's size */
+    height: 110px; /* Adjust the circle's size */
+    background-color: #0067B4;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px; /* Add padding */
+  }
+  
+  .white-icon {
+    color: white;
+  }
+  
