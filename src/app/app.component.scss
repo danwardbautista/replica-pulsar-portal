@@ -1,0 +1,160 @@
+$lineColor: #d9d7d7;
+
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.input-field {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    flex: 1;
+}
+
+.enter-button {
+    padding: 10px 15px;
+    background-color: #28A745;
+    color: #fff;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.custom-toolbar {
+    background: #0067B4;
+    color: white;
+    height: 60px;
+    /* Adjust the height as needed */
+}
+
+.pulsar-logo {
+    width: 95px;
+    height: auto;
+}
+
+.mat-toolbar .mat-primary {
+    background: black;
+    color: #fff;
+}
+
+.example-container {
+    width: 100%;
+    height: calc(100vh - 60px);
+}
+
+.example-sidenav-content {
+    height: 100%;
+    overflow: auto;
+    padding: 20px;
+    background: white;
+}
+
+.example-sidenav {
+    width: 300px;
+    background: #F8F9FA;
+    color: black;
+}
+
+.sidenav-button-container {
+    width: 100%;
+}
+
+.sidenav-logo {
+    height: auto;
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+}
+
+.sidenav-button {
+    width: 100%;
+    border-radius: 0px;
+    background-color: transparent;
+    text-align: left;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 10px;
+    padding-left: 15px;
+    display: flex;
+    align-items: center;
+    border: none;
+    color: #333333;
+}
+
+.sidenav-text {
+    margin-left: 12px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #6C757D;
+}
+
+.sidenav-button:hover {
+    color: #1f1f1f;
+}
+
+.sidenav-button:focus {
+    color: #0067B4;
+}
+
+.active {
+    color: #0067B4;
+}
+
+.sidenav-button-icon {
+    margin-right: 15px;
+}
+
+
+
+// .sidenav-button-container {
+//     background-color: #ffffff;
+//     border-radius: 10px;
+//     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+//     padding: 20px;
+//     width: 300px;
+//   }
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.account-search-button {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.account-search-button:hover {
+    background-color: #0056b3;
+}
+
+.account-search-icons {
+    font-size: 24px;
+    vertical-align: middle;
+}
+
+/* Adjust the size of the input element */
+.smaller-input {
+    font-size: 16px;
+    /* You can adjust the font size as needed */
+    padding: 4px;
+    /* You can adjust the padding as needed */
+}
+
+/* Adjust the size of the button element */

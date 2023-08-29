@@ -1,0 +1,111 @@
+<mat-toolbar class="custom-toolbar">
+  <img class="pulsar-logo" src="assets/pulsar4-logo.png">
+ 
+  <span style="padding-left: 15px;"></span>
+  <span class="example-spacer"></span>
+  John Smith
+  <button mat-icon-button class="example-icon favorite-icon" [matMenuTriggerFor]="menu">
+    <mat-icon>account_circle</mat-icon>
+    <mat-icon>arrow_drop_down</mat-icon>
+  </button>
+  
+  <mat-menu #menu="matMenu">
+    <button class="logout-button" style="height: 100%;width: 100%;"><mat-icon
+      style="margin-right: 5px;">logout</mat-icon>Logout</button>
+  </mat-menu>
+</mat-toolbar>
+
+<mat-drawer-container class="example-container">
+  
+  <mat-drawer #drawer class="example-sidenav" mode="side" opened="true">
+    <br>
+    <div class="container">
+      <input type="text" class="input-field" placeholder="Account">
+      <button class="enter-button"><i class="bi bi-arrow-right-circle"></i></button>
+    </div>
+    <hr>
+    <div class="sidenav-button-container">
+      <button routerLink="home" class="sidenav-button" routerLinkActive="active">
+        <mat-icon class="sidenav-button-icon">dashboard</mat-icon>
+        Dashboard
+      </button>
+    </div>
+    <div class="sidenav-button-container">
+      <button routerLink="services" class="sidenav-button" routerLinkActive="active">
+        <mat-icon class="sidenav-button-icon">satellite</mat-icon>
+        Services &amp; Devices
+      </button>
+    </div>
+    <div class="sidenav-button-container">
+      <button routerLink="templates" class="sidenav-button" routerLinkActive="active">
+        <mat-icon class="sidenav-button-icon">file_copy</mat-icon>
+        Templates
+      </button>
+    </div>
+    <div class="sidenav-button-container">
+      <button routerLink="tags" class="sidenav-button" routerLinkActive="active">
+        <mat-icon class="sidenav-button-icon">collections_bookmark</mat-icon>
+        Tags
+      </button>
+    </div>
+
+    <hr>
+    <p class="sidenav-text">Profiles</p>
+
+    <div class="sidenav-button-container">
+      <button routerLink="alerting" class="sidenav-button" routerLinkActive="active">
+        <mat-icon class="sidenav-button-icon">add_alert</mat-icon>
+        Alerting
+      </button>
+    </div>
+
+    <div class="sidenav-button-container">
+      <button routerLink="barring" class="sidenav-button" routerLinkActive="active">
+        <mat-icon class="sidenav-button-icon">lock</mat-icon>
+        Barring
+      </button>
+    </div>
+
+    <div class="sidenav-button-container">
+      <button routerLink="firewall" class="sidenav-button" routerLinkActive="active">
+        <mat-icon class="sidenav-button-icon">security</mat-icon>
+        Firewall
+      </button>
+    </div>
+
+    <div class="sidenav-button-container">
+      <button routerLink="domain" class="sidenav-button" routerLinkActive="active">
+        <mat-icon class="sidenav-button-icon">domain</mat-icon>
+        Domain Filter
+      </button>
+    </div>
+
+    <hr>
+    <p class="sidenav-text">Account Management</p>
+
+    <div class="sidenav-button-container">
+      <button routerLink="action-log" class="sidenav-button" routerLinkActive="active">
+        <mat-icon class="sidenav-button-icon">list</mat-icon>
+        Action Log
+      </button>
+    </div>
+
+    <div class="sidenav-button-container">
+      <button routerLink="users" class="sidenav-button" routerLinkActive="active">
+        <mat-icon class="sidenav-button-icon">supervisor_account</mat-icon>
+        Users
+      </button>
+    </div>
+
+    <div style="position: fixed;bottom: 0;padding-left:60px;padding-bottom: 40px;">
+      
+    </div>
+  </mat-drawer>
+
+  <div class="example-sidenav-content">
+    <router-outlet></router-outlet>
+  </div>
+
+</mat-drawer-container>
+
+
