@@ -1,1 +1,32 @@
-<p>templates works!</p>
+
+<div class="row">
+    <div class="col">
+        <input type="text" class="form-control" placeholder="Filter Services" (keyup)="applyFilter($event)">
+    </div>
+    <div class="col-auto">
+        <button class="main-button"><i class="bi bi-plus-circle"></i>&nbsp;Create Template</button>
+    </div>
+</div>
+
+<br>
+
+<div>
+    <table mat-table [dataSource]="dataSource" matSort>
+
+        <ng-container matColumnDef="template">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
+            <td mat-cell *matCellDef="let element"> {{element.template}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="action">
+            <th mat-header-cell *matHeaderCellDef> Action </th>
+            <td mat-cell *matCellDef="let element"><button class="modify-button"><i class="bi bi-pencil-square"></i>&nbsp;Modify</button> </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+    <mat-paginator [pageSizeOptions]="[15, 20, 50]" showFirstLastButtons aria-label="Select page of periodic elements">
+    </mat-paginator>
+</div>
