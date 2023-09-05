@@ -6,8 +6,81 @@ import {MatSort, Sort} from '@angular/material/sort'
 
 @Component({
   selector: 'app-services',
-  templateUrl: './services.component.html',
-  styleUrls: ['./services.component.scss']
+  template: `
+    <input type="text" class="form-control" placeholder="Filter Services" (keyup)="applyFilter($event)">
+
+    <br>
+
+    <div>
+      <table mat-table [dataSource]="dataSource" matSort>
+
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
+          <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="vessel">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Vessel </th>
+          <td mat-cell *matCellDef="let element"> {{element.vessel}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="type">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Type </th>
+          <td mat-cell *matCellDef="let element"> {{element.type}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="msisdn">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> MSISDN </th>
+          <td mat-cell *matCellDef="let element"> {{element.msisdn}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="iccid">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> ICCID </th>
+          <td mat-cell *matCellDef="let element"> {{element.iccid}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="status">
+          <th mat-header-cell *matHeaderCellDef> Status </th>
+          <td mat-cell *matCellDef="let element"><mat-icon style="color:green">wifi</mat-icon>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<mat-icon style="color:green;">lock</mat-icon> </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr routerLink="/service" mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+<!--        (click)="open(content)"-->
+      </table>
+
+      <mat-paginator [pageSizeOptions]="[15, 20, 50]" showFirstLastButtons aria-label="Select page of periodic elements">
+      </mat-paginator>
+    </div>
+
+    <ng-template #content let-modal>
+      <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">Profile update</h4>
+        <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="dateOfBirth">Date of birth</label>
+            <div class="input-group">
+              <input
+                id="dateOfBirth"
+                class="form-control"
+                placeholder="yyyy-mm-dd"
+                name="dp"
+                ngbDatepicker
+                #dp="ngbDatepicker"
+              />
+              <button class="btn btn-outline-secondary bi bi-calendar3" (click)="dp.toggle()" type="button"></button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
+      </div>
+    </ng-template>
+  `,
 })
 export class ServicesComponent {
   isCardVisible: boolean = false;
@@ -45,20 +118,6 @@ export class ServicesComponent {
 
   open(content: any) {
     this.modalService.open(content);
-
-    console.log('click');
-  }
-
-  openSm(content: any) {
-    this.modalService.open(content, { size: 'sm' });
-  }
-
-  openLg(content: any) {
-    this.modalService.open(content, { size: 'lg' });
-  }
-
-  openXl(content: any) {
-    this.modalService.open(content, { size: 'xl' });
   }
 }
 export interface PeriodicElement {

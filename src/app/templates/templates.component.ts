@@ -7,7 +7,6 @@ import {MatSort, Sort} from '@angular/material/sort'
 @Component({
   selector: 'app-templates',
   templateUrl: './templates.component.html',
-  styleUrls: ['./templates.component.scss']
 })
 export class TemplatesComponent {
   displayedColumns: string[] = ['template', 'action'];
@@ -32,18 +31,6 @@ export class TemplatesComponent {
     this.modalService.open(content);
 
     console.log('click');
-  }
-
-  openSm(content: any) {
-    this.modalService.open(content, { size: 'sm' });
-  }
-
-  openLg(content: any) {
-    this.modalService.open(content, { size: 'lg' });
-  }
-
-  openXl(content: any) {
-    this.modalService.open(content, { size: 'xl' });
   }
 }
 export interface PeriodicElement {
