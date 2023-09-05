@@ -40,10 +40,12 @@ import { DomainComponent } from './domain/domain.component';
 import { ActionLogComponent } from './action-log/action-log.component';
 import { UsersComponent } from './users/users.component';
 import {ServiceComponent} from "./service/service.component";
+import { LoginComponent } from './login/login.component';
 
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'logout', component: LoginComponent },
   { path: 'home', component: HomeComponent },
   { path: 'services', component: ServicesComponent },
   { path: 'templates', component: TemplatesComponent },
@@ -68,7 +70,8 @@ const routes: Routes = [
     FirewallComponent,
     DomainComponent,
     ActionLogComponent,
-    UsersComponent
+    UsersComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
