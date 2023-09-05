@@ -47,7 +47,7 @@
     <div class="card">
       <button class="close-button" (click)="toggleCardClose()">&times;</button>
       <!-- Card content goes here -->
-      <p style="font-size: 25px;">{{display?.name}}</p>
+      <p style="font-size: 25px;">{{display?.name}}<button class="btn btn-primary" style="margin-left:15px;">View more</button></p>
       <p><b>Service ID: </b>{{display?.serviceid}}</p>
       <p><b>MSISDN: </b>{{display?.msisdn}}</p>
       <p><b>ICCID: </b>{{display?.iccid}}</p>
@@ -57,6 +57,6 @@
       <p><b>Connected: </b>{{display?.connected}}</p>
       <p><b>Plan Started: </b>{{display?.plan_started}}</p>
   
-      <button class="btn btn-dark">View more</button>
+      
     </div>
   </div>
