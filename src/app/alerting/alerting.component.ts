@@ -6,7 +6,6 @@ import { ModalDismissReasons, NgbDatepickerModule, NgbModal } from '@ng-bootstra
 @Component({
   selector: 'app-alerting',
   templateUrl: './alerting.component.html',
-  styleUrls: ['./alerting.component.scss']
 })
 export class AlertingComponent {
   displayedColumns: string[] = ['name', 'status'];

@@ -6,7 +6,6 @@ import { ModalDismissReasons, NgbDatepickerModule, NgbModal } from '@ng-bootstra
 @Component({
   selector: 'app-barring',
   templateUrl: './barring.component.html',
-  styleUrls: ['./barring.component.scss']
 })
 export class BarringComponent {
   displayedColumns: string[] = ['name', 'status', 'action'];

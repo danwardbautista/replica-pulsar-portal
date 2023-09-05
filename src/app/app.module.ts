@@ -39,6 +39,7 @@ import { FirewallComponent } from './firewall/firewall.component';
 import { DomainComponent } from './domain/domain.component';
 import { ActionLogComponent } from './action-log/action-log.component';
 import { UsersComponent } from './users/users.component';
+import {ServiceComponent} from "./service/service.component";
 
 
 const routes: Routes = [
@@ -53,12 +54,12 @@ const routes: Routes = [
   { path: 'domain', component: DomainComponent },
   { path: 'action-log', component: ActionLogComponent },
   { path: 'users', component: UsersComponent },
+  { path: 'service', component: ServiceComponent}
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
     ServicesComponent,
     TagsComponent,
     TemplatesComponent,

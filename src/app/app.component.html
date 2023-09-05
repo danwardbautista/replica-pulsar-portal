@@ -1,14 +1,15 @@
 <mat-toolbar class="custom-toolbar">
   <img class="pulsar-logo" src="assets/pulsar4-logo.png">
- 
+
   <span style="padding-left: 15px;"></span>
   <span class="example-spacer"></span>
-  John Smith
+  <span style="font-weight: 400; font-size: 16px;">
+  John Smith</span>
   <button mat-icon-button class="example-icon favorite-icon" [matMenuTriggerFor]="menu">
     <mat-icon>account_circle</mat-icon>
     <mat-icon>arrow_drop_down</mat-icon>
   </button>
-  
+
   <mat-menu #menu="matMenu">
     <button class="logout-button" style="height: 100%;width: 100%;"><mat-icon
       style="margin-right: 5px;">logout</mat-icon>Logout</button>
@@ -16,7 +17,7 @@
 </mat-toolbar>
 
 <mat-drawer-container class="example-container">
-  
+
   <mat-drawer #drawer class="example-sidenav" mode="side" opened="true">
     <br>
     <div class="container">
@@ -28,7 +29,7 @@
       <button routerLink="home" class="sidenav-button" routerLinkActive="active">
         <fa-icon class="sidenav-button-icon" [icon]="faHome"></fa-icon>
         Dashboard
-        
+
       </button>
     </div>
     <div class="sidenav-button-container">
@@ -99,7 +100,7 @@
     </div>
 
     <div style="position: fixed;bottom: 0;padding-left:60px;padding-bottom: 40px;">
-      
+
     </div>
   </mat-drawer>
 
