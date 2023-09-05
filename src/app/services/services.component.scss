@@ -12,8 +12,24 @@
   transition: opacity 0.5s cubic-bezier(0.42, 0, 0.58, 1);
 }
 
+.view-button {
+  width: max-content;
+  padding: 8px 8px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  background-color: #0067b4;
+  color: white;
+  border: 0px;
+}
+
 .content-container {
   margin-bottom: 300px;
+}
+
+.title-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
 }
 
 .card {
@@ -22,16 +38,13 @@
   border-radius: 5px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
   pointer-events: auto;
-  width: 120vh;
+  width: 60vw;
   position: relative;
   height: 300px;
-  overflow-y: auto; 
+  overflow-y: auto;
 }
 
 .close-button {
-  position: absolute;
-  top: 10px;
-  right: 10px;
   background: none;
   border: none;
   font-size: 24px;
