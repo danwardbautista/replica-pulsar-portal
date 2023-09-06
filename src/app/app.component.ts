@@ -11,14 +11,19 @@ import { filter } from 'rxjs/operators';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  showToolbarAndDrawer: boolean = true;
+  showToolbar: boolean = true;
 
   constructor(private router: Router, private _snackBar: MatSnackBar, private route: ActivatedRoute) {
-    this.router.events
-      .pipe(filter((event: Event): event is NavigationEnd => event instanceof NavigationEnd))
-      .subscribe((event: NavigationEnd) => {
-        this.showToolbarAndDrawer = event.url !== '/login';
-      });
+  }
+
+  ngOnInit() {
+    this.router.events.subscribe(() => {
+      this.showToolbar = !this.isLoginPage();
+    });
+  }
+
+  isLoginPage(): boolean {
+    return this.router.url === '/login';
   }
 
   title = 'replica-pulsar-portal';
