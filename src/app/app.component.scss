@@ -34,7 +34,7 @@ $lineColor: #d9d7d7;
 .custom-toolbar {
     background: #0067B4;
     color: white;
-    height: 60px;
+    // height: 60px;
     /* Adjust the height as needed */
 }
 
@@ -50,7 +50,7 @@ $lineColor: #d9d7d7;
 
 .example-container {
     width: 100%;
-    height: calc(100vh - 60px);
+    height: calc(100vh);
 }
 
 .example-sidenav-content {

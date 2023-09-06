@@ -44,10 +44,14 @@ import {NewTemplateComponent} from "./templates/new-template.component";
 import {NewTagComponent} from "./tags/new-tag.component";
 import {NewAlertComponent} from "./alerting/new-alert.component";
 import {NewBarringComponent} from "./barring/new-barring.component";
+import { LoginComponent } from './login/login.component';
+import { AuthComponent } from './auth/auth.component';
 
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'login', component: LoginComponent },
+  { path: 'auth', component: AuthComponent },
   { path: 'home', component: HomeComponent },
   { path: 'services', component: ServicesComponent },
   { path: 'templates', component: TemplatesComponent },
@@ -76,7 +80,9 @@ const routes: Routes = [
     FirewallComponent,
     DomainComponent,
     ActionLogComponent,
-    UsersComponent
+    UsersComponent,
+    LoginComponent,
+    AuthComponent
   ],
   imports: [
     BrowserModule,

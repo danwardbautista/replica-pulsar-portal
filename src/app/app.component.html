@@ -1,4 +1,8 @@
-<mat-toolbar class="custom-toolbar">
+<!-- <mat-toolbar class="custom-toolbar" *ngIf="!showToolbar" style="visibility: hidden; height: 0;">
+
+</mat-toolbar> -->
+
+<mat-toolbar class="custom-toolbar" *ngIf="showToolbar">
   <img class="pulsar-logo" src="assets/pulsar4-logo.png">
 
   <span style="padding-left: 15px;"></span>
@@ -11,14 +15,14 @@
   </button>
 
   <mat-menu #menu="matMenu">
-    <button class="logout-button" style="height: 100%;width: 100%;"><mat-icon
-      style="margin-right: 5px;">logout</mat-icon>Logout</button>
+    <a href="/login"><button class="logout-button" style="height: 100%;width: 100%;"><mat-icon
+      style="margin-right: 5px;">logout</mat-icon>Logout</button></a>
   </mat-menu>
 </mat-toolbar>
 
 <mat-drawer-container class="example-container">
 
-  <mat-drawer #drawer class="example-sidenav" mode="side" opened="true">
+  <mat-drawer #drawer class="example-sidenav" mode="side" opened="true" *ngIf="showToolbar">
     <br>
     <div class="container">
       <input type="text" class="input-field" placeholder="Account">
@@ -99,14 +103,15 @@
       </button>
     </div>
 
-    <div style="position: fixed;bottom: 0;padding-left:60px;padding-bottom: 40px;">
+    <!-- <div style="position: fixed;bottom: 0;padding-left:60px;padding-bottom: 40px;">
 
-    </div>
+    </div> -->
   </mat-drawer>
 
-  <div class="example-sidenav-content">
+  <div [class.example-sidenav-content]="showToolbar">
     <router-outlet></router-outlet>
   </div>
+
 
 </mat-drawer-container>
 
