@@ -40,6 +40,10 @@ import { DomainComponent } from './domain/domain.component';
 import { ActionLogComponent } from './action-log/action-log.component';
 import { UsersComponent } from './users/users.component';
 import {ServiceComponent} from "./service/service.component";
+import {NewTemplateComponent} from "./templates/new-template.component";
+import {NewTagComponent} from "./tags/new-tag.component";
+import {NewAlertComponent} from "./alerting/new-alert.component";
+import {NewBarringComponent} from "./barring/new-barring.component";
 
 
 const routes: Routes = [
@@ -47,9 +51,13 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'services', component: ServicesComponent },
   { path: 'templates', component: TemplatesComponent },
+  { path: 'templates/new', component: NewTemplateComponent},
   { path: 'tags', component: TagsComponent },
+  { path: 'tags/new', component: NewTagComponent },
   { path: 'alerting', component: AlertingComponent },
+  { path: 'alerting/new', component: NewAlertComponent},
   { path: 'barring', component: BarringComponent },
+  { path: 'barring/new', component: NewBarringComponent},
   { path: 'firewall', component: FirewallComponent },
   { path: 'domain', component: DomainComponent },
   { path: 'action-log', component: ActionLogComponent },

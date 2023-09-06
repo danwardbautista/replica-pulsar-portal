@@ -29,8 +29,6 @@ export class TemplatesComponent {
 
   open(content: any) {
     this.modalService.open(content);
-
-    console.log('click');
   }
 }
 export interface PeriodicElement {

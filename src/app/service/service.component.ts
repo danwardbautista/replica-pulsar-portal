@@ -14,7 +14,7 @@ import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
     '.accordion { margin-top: 12px; }'
   ],
   template: `
-    <div class="mt-1 mb-3 ng-tns-c97-3"><a routerlink="/service"
+    <div class="mt-1 mb-3"><a routerlink="/service"
                                                                 style="font-weight: 500; text-decoration: none;" href="/services">
       < Services</a></div>
 
