@@ -196,7 +196,7 @@ import {RouterLink} from "@angular/router";
 
 
         <div class="my-3 text-right">
-          <button class="btn btn-success" type="submit">
+          <button [routerLink]="'/alerting'" class="btn btn-success" type="submit">
             Create Profile
           </button>
         </div>

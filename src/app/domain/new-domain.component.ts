@@ -5,7 +5,7 @@ import {RouterLink} from "@angular/router";
   standalone: true,
   template: `
     <div class="mt-1 mb-3">
-      <a [routerLink]="'/tags'"
+      <a [routerLink]="'/domain'"
          style="font-weight: 500; text-decoration: none;">
         < Domain Filters</a>
     </div>
@@ -20,7 +20,7 @@ import {RouterLink} from "@angular/router";
         <div class="card mb-4">
           <fieldset class="card-body">
 
-            <h5 class="card-title">Tag Details</h5>
+            <h5 class="card-title">Domain Filter</h5>
             <!--<p class="text-muted">Reassuring text that explains what this is and what you do.</p>-->
 
             <div class="form-group row">

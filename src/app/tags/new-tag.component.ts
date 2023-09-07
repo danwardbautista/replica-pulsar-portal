@@ -34,7 +34,7 @@ import {RouterLink} from "@angular/router";
         </div>
 
         <div class="my-3 text-right">
-          <button class="btn btn-success" type="submit">
+          <button class="btn btn-success"  [routerLink]="'/tags'" type="submit">
             Create Tag
           </button>
         </div>

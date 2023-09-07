@@ -1,11 +1,12 @@
 import {Component} from "@angular/core";
+import {RouterLink} from "@angular/router";
 
 @Component({
   standalone: true,
   template: `
     <div class="mt-1 mb-3">
-      <a routerLink="/templates" href="/templates"
-         style="font-weight: 500; text-decoration: none;" >
+      <a [routerLink]="'/templates'"
+         style="font-weight: 500; text-decoration: none;">
         < Templates</a>
     </div>
 
@@ -33,7 +34,7 @@ import {Component} from "@angular/core";
         </div>
 
         <div class="my-3 text-right">
-          <button class="btn btn-success" type="submit">
+          <button [routerLink]="'/templates'" class="btn btn-success" type="submit">
             Create Template
           </button>
         </div>
@@ -43,6 +44,9 @@ import {Component} from "@angular/core";
     </div>
 
   `,
+  imports: [
+    RouterLink
+  ]
 })
 export class NewTemplateComponent {
 
