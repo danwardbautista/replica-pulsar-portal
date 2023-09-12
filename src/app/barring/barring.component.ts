@@ -8,7 +8,7 @@ import { ModalDismissReasons, NgbDatepickerModule, NgbModal } from '@ng-bootstra
   templateUrl: './barring.component.html',
 })
 export class BarringComponent {
-  displayedColumns: string[] = ['name', 'status', 'action'];
+  displayedColumns: string[] = ['name', 'status'];
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
 
   constructor(private modalService: NgbModal) { }
