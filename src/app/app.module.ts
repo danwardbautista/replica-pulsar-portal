@@ -1,72 +1,74 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import {AppRoutingModule} from './app-routing.module';
+import {AppComponent} from './app.component';
 
-import { RouterModule, Routes } from '@angular/router';
+import {RouterModule, Routes} from '@angular/router';
 
-import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatButtonModule} from '@angular/material/button';
 import {MatDividerModule} from '@angular/material/divider';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatCardModule } from '@angular/material/card';
-import { MatMenuModule } from '@angular/material/menu';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatCardModule} from '@angular/material/card';
+import {MatMenuModule} from '@angular/material/menu';
 
-import { MatTableModule } from '@angular/material/table';
-import { HttpClientModule } from '@angular/common/http';
-import { MatPaginatorModule } from '@angular/material/paginator';
-import { MatSortModule } from '@angular/material/sort';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { MatSelect, MatSelectModule } from '@angular/material/select';
-import { MatOptionModule } from '@angular/material/core';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
+import {MatTableModule} from '@angular/material/table';
+import {HttpClientModule} from '@angular/common/http';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatSortModule} from '@angular/material/sort';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatSelect, MatSelectModule} from '@angular/material/select';
+import {MatOptionModule} from '@angular/material/core';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {FontAwesomeModule} from '@fortawesome/angular-fontawesome'
 
-import { HomeComponent } from './home/home.component';
-import { ServicesComponent } from './services/services.component';
-import { TagsComponent } from './tags/tags.component';
-import { TemplatesComponent } from './templates/templates.component';
-import { AlertingComponent } from './alerting/alerting.component';
-import { BarringComponent } from './barring/barring.component';
-import { FirewallComponent } from './firewall/firewall.component';
-import { DomainComponent } from './domain/domain.component';
-import { ActionLogComponent } from './action-log/action-log.component';
-import { UsersComponent } from './users/users.component';
+import {HomeComponent} from './home/home.component';
+import {ServicesComponent} from './services/services.component';
+import {TagsComponent} from './tags/tags.component';
+import {TemplatesComponent} from './templates/templates.component';
+import {AlertingComponent} from './alerting/alerting.component';
+import {BarringComponent} from './barring/barring.component';
+import {FirewallComponent} from './firewall/firewall.component';
+import {DomainComponent} from './domain/domain.component';
+import {ActionLogComponent} from './action-log/action-log.component';
+import {UsersComponent} from './users/users.component';
 import {ServiceComponent} from "./service/service.component";
 import {NewTemplateComponent} from "./templates/new-template.component";
 import {NewTagComponent} from "./tags/new-tag.component";
 import {NewAlertComponent} from "./alerting/new-alert.component";
 import {NewBarringComponent} from "./barring/new-barring.component";
-import { LoginComponent } from './login/login.component';
-import { AuthComponent } from './auth/auth.component';
+import {LoginComponent} from './login/login.component';
+import {AuthComponent} from './auth/auth.component';
+import {NewProfileComponent} from "./firewall/new-profile.component";
 
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'login', component: LoginComponent },
-  { path: 'auth', component: AuthComponent },
-  { path: 'home', component: HomeComponent },
-  { path: 'services', component: ServicesComponent },
-  { path: 'templates', component: TemplatesComponent },
-  { path: 'templates/new', component: NewTemplateComponent},
-  { path: 'tags', component: TagsComponent },
-  { path: 'tags/new', component: NewTagComponent },
-  { path: 'alerting', component: AlertingComponent },
-  { path: 'alerting/new', component: NewAlertComponent},
-  { path: 'barring', component: BarringComponent },
-  { path: 'barring/new', component: NewBarringComponent},
-  { path: 'firewall', component: FirewallComponent },
-  { path: 'domain', component: DomainComponent },
-  { path: 'action-log', component: ActionLogComponent },
-  { path: 'users', component: UsersComponent },
-  { path: 'service', component: ServiceComponent}
+  {path: '', redirectTo: 'home', pathMatch: 'full'},
+  {path: 'login', component: LoginComponent},
+  {path: 'auth', component: AuthComponent},
+  {path: 'home', component: HomeComponent},
+  {path: 'services', component: ServicesComponent},
+  {path: 'templates', component: TemplatesComponent},
+  {path: 'templates/new', component: NewTemplateComponent},
+  {path: 'tags', component: TagsComponent},
+  {path: 'tags/new', component: NewTagComponent},
+  {path: 'alerting', component: AlertingComponent},
+  {path: 'alerting/new', component: NewAlertComponent},
+  {path: 'barring', component: BarringComponent},
+  {path: 'barring/new', component: NewBarringComponent},
+  {path: 'firewall', component: FirewallComponent},
+  {path: 'firewall/new', component: NewProfileComponent},
+  {path: 'domain', component: DomainComponent},
+  {path: 'action-log', component: ActionLogComponent},
+  {path: 'users', component: UsersComponent},
+  {path: 'service', component: ServiceComponent}
 ];
 
 @NgModule({
@@ -114,4 +116,5 @@ const routes: Routes = [
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
